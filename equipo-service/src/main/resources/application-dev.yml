@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: "jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/bd_equipo?sslMode=DISABLED&allowPublicKeyRetrieval=true"
+    username: ${DB_USER:root}
+    password: "${DB_PASSWORD:}"
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  address: 127.0.0.1
+
+servicios:
+  cliente:
+    url: ${CLIENTE_SERVICE_URL:http://127.0.0.1:8081}

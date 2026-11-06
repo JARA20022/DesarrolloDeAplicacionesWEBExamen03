@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="555" viewBox="0 0 1160 555" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Microservicios de mantenimiento de equipos</title>
+  <desc id="descripcion">Postman consulta tres servicios. Orden consulta al servicio Equipo por el ID de equipo. Equipo consulta al servicio Cliente por el ID de cliente. Cada servicio se conecta a su propia base de datos mediante Spring Data JPA.</desc>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#316d76"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #173441; }
+      .sub { fill: #48626c; }
+      .small { font-size: 14px; }
+      .mid { font-size: 16px; }
+      .label { font-weight: bold; }
+      .link { fill: none; stroke: #316d76; stroke-width: 2; marker-end: url(#flecha); }
+      .branch { fill: none; stroke: #316d76; stroke-width: 2; }
+      .service { fill: #e6f3f3; stroke: #7ca6a8; stroke-width: 1.2; }
+      .database { fill: #fff; stroke: #a0afb4; stroke-width: 1.2; }
+    </style>
+  </defs>
+  <rect width="1160" height="555" fill="#f5f8f9"/>
+  <text x="52" y="53" font-size="31" class="label">Gestión de mantenimiento de equipos</text>
+  <text x="54" y="82" font-size="17" class="sub">Laboratorio 09 · Jara Ayala Ivan Rodrigo</text>
+
+  <rect x="444" y="105" width="272" height="44" rx="7" fill="#224c56"/>
+  <text x="580" y="133" text-anchor="middle" class="mid label" style="fill:white">Postman · peticiones REST</text>
+  <path class="branch" d="M 580 149 V 170 M 168 170 H 992"/>
+  <path class="link" d="M 168 170 V 215 "/>
+  <path class="link" d="M 580 170 V 215 "/>
+  <path class="link" d="M 992 170 V 215"/>
+
+  <rect class="service" x="50" y="216" width="236" height="113" rx="10"/>
+  <text x="168" y="250" text-anchor="middle" font-size="21" class="label">Cliente</text>
+  <text x="168" y="278" text-anchor="middle" class="mid">8081 · /clientes</text>
+  <text x="168" y="303" text-anchor="middle" class="small sub">Gestiona datos de contacto</text>
+
+  <rect class="service" x="462" y="216" width="236" height="113" rx="10"/>
+  <text x="580" y="250" text-anchor="middle" font-size="21" class="label">Equipo</text>
+  <text x="580" y="278" text-anchor="middle" class="mid">8082 · /equipos</text>
+  <text x="580" y="303" text-anchor="middle" class="small sub">Registra el equipo y su cliente</text>
+
+  <rect class="service" x="874" y="216" width="236" height="113" rx="10"/>
+  <text x="992" y="250" text-anchor="middle" font-size="21" class="label">Orden de servicio</text>
+  <text x="992" y="278" text-anchor="middle" class="mid">8083 · /ordenes</text>
+  <text x="992" y="303" text-anchor="middle" class="small sub">Registra y actualiza el trabajo</text>
+
+  <path class="link" d="M 462 273 H 289 "/>
+  <path class="link" d="M 874 273 H 701"/>
+  <text x="374" y="258" text-anchor="middle" class="small label">GET /clientes/{id}</text>
+  <text x="786" y="258" text-anchor="middle" class="small label">GET /equipos/{id}</text>
+
+  <path class="link" d="M 168 329 V 402 "/>
+  <path class="link" d="M 580 329 V 402 "/>
+  <path class="link" d="M 992 329 V 402"/>
+  <text x="182" y="371" class="small sub">JPA</text>
+  <text x="594" y="371" class="small sub">JPA</text>
+  <text x="1006" y="371" class="small sub">JPA</text>
+
+  <rect class="database" x="50" y="403" width="236" height="79" rx="9"/>
+  <text x="168" y="435" text-anchor="middle" class="mid label">bd_cliente</text>
+  <text x="168" y="461" text-anchor="middle" class="small sub">Tabla clientes</text>
+
+  <rect class="database" x="462" y="403" width="236" height="79" rx="9"/>
+  <text x="580" y="435" text-anchor="middle" class="mid label">bd_equipo</text>
+  <text x="580" y="461" text-anchor="middle" class="small sub">Tabla equipos</text>
+
+  <rect class="database" x="874" y="403" width="236" height="79" rx="9"/>
+  <text x="992" y="435" text-anchor="middle" class="mid label">bd_orden_servicio</text>
+  <text x="992" y="461" text-anchor="middle" class="small sub">Tabla ordenes</text>
+
+  <text x="54" y="522" class="small sub">Cada servicio escribe en su propia base. Las peticiones GET entre servicios verifican los IDs asociados.</text>
+</svg>

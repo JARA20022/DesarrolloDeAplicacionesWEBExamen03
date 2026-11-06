@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: orden-service
+  profiles:
+    default: dev
+  jackson:
+    datatype:
+      enum:
+        fail-on-numbers-for-enums: true
+  jpa:
+    open-in-view: false
+
+server:
+  port: ${SERVER_PORT:8083}
